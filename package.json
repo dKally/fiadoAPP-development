@@ -1,0 +1,33 @@
+{
+  "name": "fiadoapp",
+  "productName": "FiadoAPP",
+  "version": "1.0.0",
+  "description": "Um app para registrar compras fiado de clientes.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start-dev": "NODE_ENV=development electron .",
+    "pack": "electron-build --dir",
+    "dist": "electron-builder"
+  },
+  "author": "dKally",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^24.3.1",
+    "electron-builder": "^24.6.3"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "path": "^0.12.7",
+    "zip-local": "^0.3.5"
+  },
+  "build": {
+    "appId": "dKally.FiadoAPP",
+    "mac": {
+      "icon": "build/src/icon.png"
+    },
+    "win": {
+      "icon": "./src/icon.png"
+    }
+  }
+}

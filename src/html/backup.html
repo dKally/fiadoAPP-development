@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/backup.css">
+    <link rel="stylesheet" href="../styles/minimize-close.css">
+    <title>Backup - FiadoAPP</title>
+</head>
+<body>
+    <div class="content">
+        <a class="btn btn_" href="../index.html">Home</a>
+
+        <div class="minimize-close">
+            <p class="minimize">-</p>
+            <p class="close">x</p>
+        </div>
+        <div class="container">
+            <p class="btn save-backup">Salvar Backup</p>
+
+            <p class="btn backup">Fazer Backup</p>
+
+            <p class="btn open-backup">Abrir Pasta de Backup</p>
+        </div>
+
+        <div class="container-alert-1 hide">
+
+            <p>Ao clicar em "Confirmar", sua pasta "Clientes FiadoAPP" atual será excluida e será
+                substituida por sua pasta de backup, deseja continuar?
+            </p>
+            <button class="btn confirm">Confirmar</button>
+            <button class="btn exit">Voltar</button>
+        </div>
+
+        <div class="container-alert-2 hide">
+
+            <p>Lembre-se de salvar seu backup em algum armazenamento externo ou na núvem.
+            </p>
+            <button class="btn paste">Salvar em uma pasta</button>
+            <button class="btn zip">Salvar em .zip</button>
+            <button class="btn exit2">Voltar</button>
+        </div>
+    </div>
+
+    <script src="../scripts/minimize-close.js"></script>
+    <script src="../scripts/backup.js"></script>
+
+</body>
+</html>

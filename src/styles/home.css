@@ -1,0 +1,36 @@
+body{
+    background-image: linear-gradient(to bottom, #ffff, #a0a0a0);
+}
+
+.box{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    /* color: #fff; */
+    font-size: 2.5rem;
+    text-decoration: none;
+    outline: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    outline: none;
+    box-shadow: 0 0 0 0;
+    transform: translateX(0) scale(0.95);
+}
+  
+.btn:hover {
+    background-color: #34495e;
+    box-shadow: 0 0 10px #34495e,
+    0 0 22px #34495e;
+    color: #fff;
+    transform: translateX(5px) scale(1);
+    transform: translateY(5px) scale(1);
+    transform: translateZ(5px) scale(1);
+}
+

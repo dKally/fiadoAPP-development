@@ -1,0 +1,18 @@
+.minimize-close{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.minimize{
+    margin-right: 20px;
+    color: blue;
+}
+
+.close{
+    color: red;
+}
+

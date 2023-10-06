@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta
+     http-equiv="Content-Security-Policy"
+     content="script-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/client.css">
+    <link rel="stylesheet" href="../styles/minimize-close.css">
+    <title>Clientes - FiadoAPP</title>
+</head>
+<body>
+    <div class="content">
+        <div class="minimize-close">
+            <p class="minimize">-</p>
+            <p class="close">x</p>
+        </div>
+
+            <div class="box">
+
+                <a class="btn" href="../index.html">Home</a>
+        
+                <a class="btn" href="./list-client.html">Voltar</a>
+        
+                <div class="register">
+                    <div>
+                        <p class="titleInfo">Nome:</p>
+                        <p class="info" id="name"></p>
+                    </div>
+        
+        
+                    <div>
+                        <p class="titleInfo">Sobrenome:</p>
+                        <p class="info" id="last-name"></p>  
+                    </div>
+        
+                
+                    <div>
+                        <p class="titleInfo">Telefone:</p>
+                        <p class="info" id="phone"></p>        
+                    </div>
+        
+                        
+                    <div>
+                        <p class="titleInfo">CPF:</p>
+                        <p class="info" id="cpf"></p>                    
+                    </div>
+        
+        
+                </div>
+        
+                <div class="new-purshase-div">
+        
+                    <label for="">Vendedor(a)</label>
+                    <input class="input" id="seller" type="text" placeholder="Vendedor(a)">
+        
+                    <label for="">Item(s)</label>
+                    <input class="input" id="item" type="text" placeholder="Item(s)">
+        
+                    <label for="">Valor Total</label>
+                    <input class="input" id="value" type="number" placeholder="Valor Total">
+        
+                    <button class="btn" id="new-purchase">Adicionar Compra(s)</button>
+        
+                </div>
+        
+                <div class="purchases hide">
+                    <ul id="purchase-list"></ul>
+                    <p id="total-price"></p>
+        
+                    <div class="payment">
+                        <label for="payment-amount">Valor a Pagar:</label>
+                        <input class="input" id="payment" type="text" placeholder="Valor">
+                    <button class="btn" id="submit-payment">Enviar</button>
+                </div>
+                
+                    <ul id="payment-list" class="hide"></ul>
+                    <p id="payment-amount" class="hide"></p>
+                    <p id="remaining-balance" class="hide"></p>
+        
+        
+        
+                        
+                    <button class="pay btn">Quitar Dívida</button>
+
+                    <div class="payOff hide">
+                        <p>Deseja quitar a dívida?</p>
+                        <button class="btn btn_ pay-off-exit">Voltar</button>
+                        <button class="btn btn_ pay-off-confirm">Confirmar</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/currentClient.js"></script>
+    <script src="../scripts/minimize-close.js"></script>
+
+</body>
+</html>
