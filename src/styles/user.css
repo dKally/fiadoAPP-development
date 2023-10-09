@@ -16,6 +16,7 @@
     font-size: 5.5rem;
     letter-spacing: 10px;
     opacity: 0%;
+    transform: translateY(5px) scale(0.2);
     animation: show 3s ease-in-out forwards;
 }
 
@@ -132,7 +133,7 @@
     transform: translateZ(5px) scale(0.9);
     transition: 0.3s ease;
     opacity: 0;
-    animation: show 2s ease-in-out 3s forwards;
+    animation: show-developer 2s ease-in-out 3s forwards;
 }
 
 .developer:hover{
@@ -187,5 +188,16 @@
     }
     100%{
         opacity: 100%;
+        transform: translateY(5px) scale(1);
     }
 }
+
+@keyframes show-developer {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
