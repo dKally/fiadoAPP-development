@@ -1,0 +1,197 @@
+.content{
+    background-color: rgb(15, 15, 15);
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+}
+
+.title-welcome{
+    font-size: 5.5rem;
+    letter-spacing: 10px;
+    opacity: 0%;
+    animation: show 3s ease-in-out forwards;
+}
+
+
+/* Animation Welcome */
+
+.welcome span{
+    font-size: 4rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+    animation: shine 3s ease-in-out infinite;
+}
+
+.welcome span:nth-of-type(1){
+    margin-right: 12px;
+}
+
+.welcome span:nth-of-type(2){
+    animation-delay: 3.10s;
+    margin-right: 12px;
+}
+.welcome span:nth-of-type(3){
+    animation-delay: 3.20s;
+    margin-right: 12px;
+}
+.welcome span:nth-of-type(4){
+    animation-delay: 3.30s;
+    margin-right: 12px;
+}
+.welcome span:nth-of-type(5){
+    animation-delay: 3.40s;
+    margin-right: 12px;
+}
+.welcome span:nth-of-type(6){
+    animation-delay: 3.50s;
+    margin-right: 12px;
+}
+.welcome span:nth-of-type(7){
+    animation-delay: 3.60s;
+    margin-right: 12px;
+}
+.welcome span:nth-of-type(8){
+    animation-delay: 3.70s;
+    margin-right: 12px;
+}
+.welcome span:nth-of-type(9){
+    animation-delay: 3.80s;
+}
+.welcome span:nth-of-type(10){
+    animation-delay: 3.90s;
+}
+
+/* Animation Welcome */
+
+@keyframes shine{
+    0%{
+        color: rgb(97, 0, 97);
+        text-shadow: 0 0 12px rgb(97, 0, 97),
+        0 0 50px rgb(97, 0, 97),
+        0 0 100px rgb(97, 0, 97)
+        ;
+    }
+    10%, 90%{
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+/*  */
+
+
+/* .descripton-welcome{
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+} */
+
+/* Description Welcome + Animation */
+
+.descripton-welcome{
+    font-family: monospace;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-right: 4px solid white;
+    text-align: center;
+    width: 0ch;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 10px;
+    animation: typing 1.4s steps(21) 2s forwards, blinking 0.5s infinite 3s step-end alternate;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 22ch;
+    }
+}
+
+@keyframes blinking {
+    50%{
+        border-color: transparent;
+    }
+    
+}
+
+/*  */
+
+.developer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+    transform: translateX(5px) scale(0.9);
+    transform: translateY(5px) scale(0.9);
+    transform: translateZ(5px) scale(0.9);
+    transition: 0.3s ease;
+    opacity: 0;
+    animation: show 2s ease-in-out 3s forwards;
+}
+
+.developer:hover{
+    transform: translateX(5px) scale(1);
+    transform: translateY(5px) scale(1);
+    transform: translateZ(5px) scale(1);
+}
+
+.style-img {
+    width: 70px;
+    height: 70px;
+    overflow: hidden; 
+    border-radius: 50%; 
+}
+
+.developer img{
+    max-width: 100%;
+    height: auto;
+}
+
+.developer p{
+    color: rgb(97, 0, 97);
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.continue-welcome{
+    margin-top: 30px;
+    font-size: 1.1rem;
+    opacity: 0;
+    animation: blinking-continue 2s ease-in-out 4s infinite;
+}
+
+@keyframes blinking-continue {
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* Animation Show */
+
+@keyframes show {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
