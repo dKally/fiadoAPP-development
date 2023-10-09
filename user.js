@@ -1,6 +1,14 @@
 const fs = require('fs')
 const path = require('path')
+const { shell } = require('electron')
 
+const linkElement = document.querySelector('.developer')
+    linkElement.addEventListener('click', (event) => {
+      event.preventDefault()
+      const url = 'https://github.com/dKally'
+
+      shell.openExternal(url)
+})
 
 const userJSON = path.join(__dirname, 'user.json')
 
