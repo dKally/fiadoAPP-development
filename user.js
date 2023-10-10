@@ -20,7 +20,7 @@ let homeScreen = true
 if(homeScreen === true){
     document.addEventListener('keydown', (event)=>{
         if(event.key){
-            document.querySelector('.welcome').classList.add('hide')
+            document.querySelector('.welcome').classList.add('animation-hide')
             startLogin()
         }
     })
@@ -40,6 +40,7 @@ function startLogin(){
         if(user === ""){
             // Criando usuário
             divRegister.classList.remove('hide')
+            divRegister.classList.add('animation-show')
           
             document.querySelector('.send-register').addEventListener('click',()=>{
             const userName = document.querySelector('.name-register').value
@@ -79,6 +80,12 @@ function startLogin(){
         else{
             //Fazendo login
             document.querySelector('.sign-in').classList.remove('hide')
+            document.querySelector('.sign-in').classList.remove('animation-show')
+            document.querySelector('.sign-in-title').classList.add('sign-in-title-animation')
+            document.querySelector('.sign-in-div-1').classList.add('sign-in-div-1-animation')
+            document.querySelector('.sign-in-div-2').classList.add('sign-in-div-2-animation')
+            document.querySelector('.send-login').classList.add('send-login-animation')
+
             fs.readFile(userJSON, 'utf8', (error, data)=>{
                 if(error){
                     console.log(error)
