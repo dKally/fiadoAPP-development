@@ -73,10 +73,10 @@
 
 @keyframes shine{
     0%{
-        color: rgb(97, 0, 97);
-        text-shadow: 0 0 12px rgb(97, 0, 97),
-        0 0 50px rgb(97, 0, 97),
-        0 0 100px rgb(97, 0, 97)
+        color: rgb(131, 0, 131);
+        text-shadow: 0 0 12px rgb(131, 0, 131),
+        0 0 50px rgb(131, 0, 131),
+        0 0 100px rgb(131, 0, 131)
         ;
     }
     10%, 90%{
