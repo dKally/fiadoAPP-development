@@ -1,5 +1,10 @@
+body{
+    overflow: hidden;
+}
+
 .content{
     background-color: rgb(15, 15, 15);
+    overflow: hidden;
 }
 
 .welcome{
@@ -10,6 +15,7 @@
     width: 100vw;
     height: 100vh;
     color: #fff;
+    opacity: 100%;
 }
 
 .title-welcome{
@@ -168,6 +174,66 @@
     animation: blinking-continue 2s ease-in-out 4s infinite;
 }
 
+/* Window Login */
+
+.sign-in{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.sign-in-title{
+    font-size: 5rem;
+    opacity: 0%;
+    font-family: monospace;
+    width: 0ch;
+    white-space: nowrap;
+    border-right: 4px solid white;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    animation: typing-1 1s steps(5) 1.5s forwards, blinking-1 0.5s infinite 2.5s step-end alternate, show-1 2s ease-in-out forwards;
+}
+
+@keyframes show-1 {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes typing-1 {
+    from{
+        width: 0;
+    }
+    to{
+        width: 6ch;
+    }
+}
+
+@keyframes blinking-1 {
+    50%{
+        border-color: transparent;
+    }
+    
+}
+
+.sign-in-div-1{
+    
+}
+
+
+
 @keyframes blinking-continue {
     0%{
         opacity: 0%;
@@ -179,6 +245,7 @@
         opacity: 0;
     }
 }
+
 
 /* Animation Show */
 
@@ -201,3 +268,39 @@
     }
 }
 
+/* Animation Hide */
+
+.animation-hide{
+    animation: animation-hide 2s ease-in-out 0s forwards;
+}
+
+@keyframes animation-hide {
+    0%{
+        transform: translateX(0%) scale(1);
+        transform: translateY(0%) scale(1);
+        transform: translateZ(0%) scale(1);
+        opacity: 100%;
+    }
+    100%{
+        transform: translateX(100%) scale(0);
+        transform: translateY(100%) scale(0);
+        transform: translateZ(100%) scale(0);
+        opacity: 0%;
+    }
+}
+
+
+/* Animation Show */
+
+.animation-show{
+    animation: animation-show 2s ease-in-out 0s forwards;
+}
+
+@keyframes animation-show {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
