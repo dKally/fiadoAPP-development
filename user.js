@@ -121,13 +121,20 @@ function startLogin(){
                     else{
                         console.log('Senha errada!')
                         document.querySelector('.password-login').value = ''
-                        document.querySelector('.alert-login').classList.remove('hide')
-                        document.querySelector('.alert-login').classList.add('animation-alert-1')
+                        const alertLogin = document.querySelector('.alert-login')
+                        if(alertLogin.classList.contains('hide') === false){
+                            console.log('teste')
+                        }
+
+                        alertLogin.classList.remove('hide')
+                        alertLogin.classList.add('animation-alert-1')
                         document.querySelector('.alert-login-close').addEventListener('click',()=>{
-                            document.querySelector('.alert-login').classList.add('animation-alert-2')
-                            setInterval(() => {
-                                document.querySelector('.alert-login').classList.add('hide') 
-                                document.querySelector('.alert-login').classList.remove('animation-alert-2') 
+                            alertLogin.classList.add('animation-alert-2')
+                            console.log('teste1')
+                            setTimeout(() => {
+                                alertLogin.classList.add('hide') 
+                                alertLogin.classList.remove('animation-alert-2') 
+                                console.log('teste2')
                             }, 2000);
 
                         })
