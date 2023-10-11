@@ -7,6 +7,90 @@ body{
     overflow: hidden;
 }
 
+/* Animation border */
+
+
+.span-div span:nth-child(1){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, rgb(15, 15, 15), rgb(97, 0, 97));
+    animation: animate1 4s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.span-div span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, rgb(15, 15, 15), rgb(97, 0, 97));
+    animation: animate2 4s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.span-div span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, rgb(15, 15, 15), rgb(97, 0, 97));
+    animation: animate3 4s linear infinite;
+}
+
+@keyframes animate3{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.span-div span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to top, rgb(15, 15, 15), rgb(97, 0, 97));
+    animation: animate4 4s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+/*  */
+
 .welcome{
     display: flex;
     justify-content: center;
@@ -188,6 +272,7 @@ body{
     justify-content: center;
     flex-direction: column;
     color: #fff;
+    text-align: center;
 }
 
 .sign-in-title{
@@ -196,11 +281,11 @@ body{
     font-family: monospace;
     width: 0ch;
     white-space: nowrap;
-    border-right: 4px solid white;
+    border-right: 10px solid white;
     overflow: hidden;
     margin-left: 10px;
     margin-bottom: 20px;
-    animation: typing-1 1s steps(5) 1.5s forwards, blinking-1 0.5s infinite 2.5s step-end alternate, show-1 2s ease-in-out forwards;
+    animation: typing-1 0.5s steps(5) 0.8s forwards, blinking-1 0.5s infinite 2s step-end alternate, show-1 2s ease-in-out forwards;
 }
 
 @keyframes show-1 {
@@ -228,8 +313,96 @@ body{
     
 }
 
+.sign-in div input{
+    padding: 20px;
+    color: rgb(97, 0, 97);
+    border-radius: 10px 0px 10px 0px;
+    box-shadow: none;
+    border: 1px solid rgb(97, 0, 97);
+    outline: none;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    transform: translateX(5px) scale(0.8);
+    transform: translateY(5px) scale(0.8);
+    transform: translateZ(5px) scale(0.8);
+}
+
+.sign-in div input:focus{
+    transform: translateX(5px) scale(1);
+    transform: translateY(5px) scale(1);
+    transform: translateZ(5px) scale(1);
+    box-shadow: 0 0 10px rgb(97, 0, 97),
+    0 0 22px rgb(97, 0, 97);
+}
+
 .sign-in-div-1{
-    
+    opacity: 0%;
+    animation: input-1 0.8s ease-in-out 1.5s forwards;
+}
+
+.sign-in-div-2{
+    opacity: 0%;
+    animation: input-2 0.8s ease-in-out 1.8s forwards;
+}
+
+.send-login{
+    opacity: 0%;
+    padding: 30px 80px 30px 80px;
+    font-size: 2rem;
+    border-radius: 10px 0px 10px 0px;
+    color: rgb(97, 0, 97);
+    transform: translateX(5px) scale(0.8);
+    transform: translateY(5px) scale(0.8);
+    transform: translateZ(5px) scale(0.8);
+    border: 1px solid rgb(97, 0, 97);
+    animation: btn-login 3s ease-in-out 2.5s forwards;
+}
+
+.send-login:hover{
+    box-shadow: 0 0 10px rgb(97, 0, 97),
+    0 0 22px rgb(97, 0, 97);
+    background-color: gray;
+    transform: translateX(5px) scale(1);
+    transform: translateY(5px) scale(1);
+    transform: translateZ(5px) scale(1);
+}
+
+
+
+
+@keyframes input-1 {
+    0%{
+        opacity: 0%;
+        margin-left: 500px;
+    }50%{
+        opacity: 100%;
+    }
+    100%{
+        margin-left: 0px;
+        opacity: 100%;
+    }
+}
+
+@keyframes input-2 {
+    0%{
+        opacity: 0%;
+        margin-right: 500px;
+    }50%{
+        opacity: 100%;
+    }
+    100%{
+        margin-right: 0px;
+        opacity: 100%;
+    }
+}
+
+@keyframes btn-login {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 
 
