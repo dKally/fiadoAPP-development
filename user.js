@@ -17,14 +17,19 @@ const appHtml = path.join(__dirname, '/src', '/index.html')
 
 let homeScreen = true
 
-if(homeScreen === true){
-    document.addEventListener('keydown', (event)=>{
-        if(event.key){
-            document.querySelector('.welcome').classList.add('animation-hide')
-            startLogin()
-        }
-    })
-}
+
+setInterval(() => {
+    if(homeScreen === true){
+        document.addEventListener('keydown', (event)=>{
+            if(event.key){
+                document.querySelector('.welcome').classList.add('animation-hide')
+
+                startLogin()
+            }
+        })
+    }
+}, 4000);
+
 
 function startLogin(){
     fs.readFile(userJSON, 'utf8', (error, data)=>{
@@ -115,10 +120,17 @@ function startLogin(){
                     }
                     else{
                         console.log('Senha errada!')
+                        document.querySelector('.password-login').value = ''
                         document.querySelector('.alert-login').classList.remove('hide')
-                        setTimeout(() => {
-                            document.querySelector('.alert-login').classList.add('hide')
-                        }, 5000);
+                        document.querySelector('.alert-login').classList.add('animation-alert-1')
+                        document.querySelector('.alert-login-close').addEventListener('click',()=>{
+                            document.querySelector('.alert-login').classList.add('animation-alert-2')
+                            setInterval(() => {
+                                document.querySelector('.alert-login').classList.add('hide') 
+                                document.querySelector('.alert-login').classList.remove('animation-alert-2') 
+                            }, 2000);
+
+                        })
                     }
                 })
             })
