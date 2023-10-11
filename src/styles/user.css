@@ -349,6 +349,7 @@ body{
     opacity: 0%;
     padding: 30px 80px 30px 80px;
     font-size: 2rem;
+    font-weight: bold;
     border-radius: 10px 0px 10px 0px;
     color: rgb(97, 0, 97);
     transform: translateX(5px) scale(0.8);
@@ -362,6 +363,7 @@ body{
     box-shadow: 0 0 10px rgb(97, 0, 97),
     0 0 22px rgb(97, 0, 97);
     background-color: gray;
+    color: rgb(131, 0, 131);
     transform: translateX(5px) scale(1);
     transform: translateY(5px) scale(1);
     transform: translateZ(5px) scale(1);
