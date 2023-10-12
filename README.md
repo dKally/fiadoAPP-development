@@ -2,4 +2,4 @@
 
 Repositório de testes e desenvolvimento do aplicativo FiadoAPP!
 
-Atualmente fazendo o sistema de login e reformulando o front-end.
+Sistema de login e tela inicial implementado e reformulando o front-end.
