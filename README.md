@@ -1,4 +1,4 @@
-# fiadoAPP-development
+# FiadoAPP-development
 
 Repositório de testes e desenvolvimento do aplicativo FiadoAPP!
 
