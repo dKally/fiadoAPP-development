@@ -122,8 +122,18 @@ function startLogin(){
                         console.log('Senha errada!')
                         document.querySelector('.password-login').value = ''
                         const alertLogin = document.querySelector('.alert-login')
-                        if(alertLogin.classList.contains('hide') === false){
-                            console.log('teste')
+
+                        if(!alertLogin.classList.contains('hide')){
+                            alertLogin.classList.add('animation-alert-3')
+                            setTimeout(() => {
+                                alertLogin.classList.remove('animation-alert-3') 
+                                alertLogin.classList.add('animation-alert-2')
+                                setTimeout(() => {
+                                    alertLogin.classList.add('hide') 
+                                    alertLogin.classList.remove('animation-alert-2') 
+                                    console.log('teste2')
+                                }, 500);
+                            }, 2000);
                         }
 
                         alertLogin.classList.remove('hide')
@@ -135,7 +145,7 @@ function startLogin(){
                                 alertLogin.classList.add('hide') 
                                 alertLogin.classList.remove('animation-alert-2') 
                                 console.log('teste2')
-                            }, 2000);
+                            }, 500);
 
                         })
                     }
