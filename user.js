@@ -23,8 +23,9 @@ setInterval(() => {
         document.addEventListener('keydown', (event)=>{
             if(event.key){
                 document.querySelector('.welcome').classList.add('animation-hide')
-
                 startLogin()
+
+                homeScreen = false
             }
         })
     }
@@ -46,6 +47,12 @@ function startLogin(){
             // Criando usuário
             divRegister.classList.remove('hide')
             divRegister.classList.add('animation-show')
+
+            document.querySelector('.register-title').classList.add('sign-in-title-animation')
+            document.querySelector('.register-div-1').classList.add('sign-in-div-1-animation')
+            document.querySelector('.register-div-2').classList.add('sign-in-div-2-animation')
+            document.querySelector('.register-div-3').classList.add('sign-in-div-1-animation')
+            document.querySelector('.send-register').classList.add('send-login-animation')
           
             document.querySelector('.send-register').addEventListener('click',()=>{
             const userName = document.querySelector('.name-register').value
@@ -53,12 +60,27 @@ function startLogin(){
             const passwordConfirm = document.querySelector('.password-confirm-register').value
     
             console.log(userName, password, passwordConfirm)
+
+            if(!password || !passwordConfirm || userName === ''){
+                return console.log(password, userName, passwordConfirm)
+            }
     
             if(password !== passwordConfirm){
-                document.querySelector('.alert-password').classList.remove('hide')
-                setTimeout(() => {
-                    document.querySelector('.alert-password').classList.add('hide')
-                }, 5000);
+                const alertPassword = document.querySelector('.alert-password')
+
+
+                alertPassword.classList.remove('hide')
+                alertPassword.classList.add('animation-alert-1')
+
+
+                document.querySelector('.close-alert-password').addEventListener('click',()=>{
+                    alertPassword.classList.add('animation-alert-2')
+                    setTimeout(() => {
+                        alertPassword.classList.remove('animation-alert-2')
+                        alertPassword.classList.add('hide')
+
+                    }, 500);
+                })
             }
             else{
                 const user = `{ "user":{ "userName": ${userName}, "password": ${userName} }}`
@@ -73,9 +95,26 @@ function startLogin(){
                         console.log('Usuário criado com sucesso!')
                         console.log(document.querySelector('.user-created'))
                         document.querySelector('.user-created').classList.remove('hide')
-                        document.querySelector('.btn-user-created').addEventListener('click', ()=>{
+
+
+
+                        // Parei Aqui!!!!!!!
+
+                        divRegister.classList.add('animation-show')
+
+                        document.querySelector('.register-title').classList.add('sign-in-title-animation')
+                        document.querySelector('.register-div-1').classList.add('sign-in-div-1-animation')
+                        document.querySelector('.register-div-2').classList.add('sign-in-div-2-animation')
+                        document.querySelector('.register-div-3').classList.add('sign-in-div-1-animation')
+                        document.querySelector('.send-register').classList.add('send-login-animation')
+
+                        // Parei Aqui!!!!!!!
+
+
+                        
+                        setTimeout(() => {
                             window.location.href = appHtml
-                        })
+                        }, 5000);
                     }
                 })
     
@@ -85,7 +124,7 @@ function startLogin(){
         else{
             //Fazendo login
             document.querySelector('.sign-in').classList.remove('hide')
-            document.querySelector('.sign-in').classList.remove('animation-show')
+            // document.querySelector('.sign-in').classList.remove('animation-show')
             document.querySelector('.sign-in-title').classList.add('sign-in-title-animation')
             document.querySelector('.sign-in-div-1').classList.add('sign-in-div-1-animation')
             document.querySelector('.sign-in-div-2').classList.add('sign-in-div-2-animation')
