@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/style.css">
     <link rel="stylesheet" href="./src/styles/user.css">
+    <link rel="stylesheet" href="./src/styles/minimize-close.css">
     <title>FiadoAPP - Login</title>
 </head>
 <body>
@@ -14,6 +15,11 @@
             <span></span>
             <span></span>
             <span></span>
+        </div>
+
+        <div class="minimize-close">
+            <p class="minimize">-</p>
+            <p class="close">x</p>
         </div>
 
 
@@ -54,7 +60,7 @@
         </div>
         <div class="register hide">
 
-            <p>Criar Usuário:</p>
+            <p class="register-title">Criar Usuário:</p>
 
             <div class="register-div-1">
                 <input placeholder="Usuário" class="name-register" type="text">
@@ -66,10 +72,12 @@
 
 
             <div class="register-div-3">
-                <input class="password-confirm-register" type="password">
+                <input placeholder="Confirmar Senha" class="password-confirm-register" type="password">
             </div>
 
-            <p class="alert-password hide">As senhas não coincidem...</p>
+            <p class="alert-password hide">As senhas não coincidem...
+                <span class="close-alert-password">x</span>
+            </p>
 
             <button class="btn send-register">Criar Usuário</button>
 
@@ -77,11 +85,10 @@
 
         <div class="user-created hide">
             <p>Usuário criado com sucesso!</p>
-            <p>Lembre-se das suas informações de login e não perca.</p>
-            <button class="btn btn-user-created">Vou me lembrar!</button">
         </div>
     </div>
 
     <script src="./user.js"></script>
+    <script src="./src/scripts/minimize-close.js"></script>
 </body>
 </html>
