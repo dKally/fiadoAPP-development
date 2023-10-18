@@ -714,6 +714,7 @@ body{
 
 .btn-registred{
     padding: 20px 60px 20px 60px;
+    margin-top: 15px;
     font-size: 2rem;
     font-weight: bold;
     border-radius: 10px 0px 10px 0px;
@@ -722,6 +723,7 @@ body{
     transform: translateY(5px) scale(0.8);
     transform: translateZ(5px) scale(0.8);
     border: 1px solid rgb(97, 0, 97);
+    transition: 0.3s ease;
 }
 
 .btn-registred:hover{
