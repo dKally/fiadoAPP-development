@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to bottom, #ffff, #a0a0a0);
+    background-image: linear-gradient(to bottom, #272727, #000000);
 }
 
 .box{
@@ -11,13 +11,14 @@ body{
 }
 
 a{
-    /* color: #fff; */
+    color: #fff;
     font-size: 2.5rem;
     text-decoration: none;
     outline: none;
 }
 
 .btn {
+    color: #fff;
     padding: 10px 20px;
     outline: none;
     box-shadow: 0 0 0 0;
@@ -25,9 +26,9 @@ a{
 }
   
 .btn:hover {
-    background-color: #34495e;
-    box-shadow: 0 0 10px #34495e,
-    0 0 22px #34495e;
+    background-color: rgb(97, 0, 97);
+    box-shadow: 0 0 10px rgb(97, 0, 97),
+    0 0 22px rgb(97, 0, 97);
     color: #fff;
     transform: translateX(5px) scale(1);
     transform: translateY(5px) scale(1);
