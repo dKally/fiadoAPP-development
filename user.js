@@ -83,7 +83,7 @@ function startLogin(){
                 })
             }
             else{
-                const user = `{ "user":{ "userName": ${userName}, "password": ${userName} }}`
+                const user = `{ "user":{ "userName": "${userName}", "password": "${password}" }}`
     
                 
                 console.log(user)
@@ -97,24 +97,20 @@ function startLogin(){
                         document.querySelector('.user-created').classList.remove('hide')
 
 
-
-                        // Parei Aqui!!!!!!!
-
-                        divRegister.classList.add('animation-show')
-
-                        document.querySelector('.register-title').classList.add('sign-in-title-animation')
-                        document.querySelector('.register-div-1').classList.add('sign-in-div-1-animation')
-                        document.querySelector('.register-div-2').classList.add('sign-in-div-2-animation')
-                        document.querySelector('.register-div-3').classList.add('sign-in-div-1-animation')
-                        document.querySelector('.send-register').classList.add('send-login-animation')
-
-                        // Parei Aqui!!!!!!!
-
-
-                        
+                        divRegister.classList.add('animation-hide')
                         setTimeout(() => {
-                            window.location.href = appHtml
-                        }, 5000);
+                            divRegister.classList.add('hide')
+                            divRegister.classList.remove('animation-hide')
+                        }, 1000)
+
+                        document.querySelector('.user-created').classList.remove('hide')
+                        document.querySelector('.btn-registred').addEventListener('click', ()=>{
+                            document.querySelector('.user-created').classList.add('animation-hide-1')
+                            setTimeout(() => {
+                                window.location.href = appHtml
+                            }, 500)
+                        })
+
                     }
                 })
     
