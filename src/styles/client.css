@@ -1,21 +1,26 @@
 body{
-    background-color: #e4e4e4;
+    background-color: #272727;
     font-size: 1.3rem;
+    color: #fff;
 }
 
 .input{
-    background-color: #e4e4e4;
+    background-color: #272727;
     padding: 5px;
     outline: none;
     box-shadow: 0 0 0 0;
-    border: 1px solid #2c3e50;
+    border: 1px solid rgb(97, 0, 97);
     border-radius: 3px;
     font-size: 1.05rem;
+    color: #fff;
 }
 
 .btn{
-    padding: 5px;
-    margin: 5px;
+    padding: 8px;
+    margin: 8px;
+    background-color: #272727;
+
+    color: #fff;
     transform: translateX(0) scale(0.95);
 }
 
@@ -26,13 +31,14 @@ body{
 }
 
 .register{
+    background-color: #1b1b1b;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
-    border-top: 1px solid #2c3e50;
-    border-bottom: 1px solid #2c3e50;
+    border-top: 1px solid rgb(97, 0, 97);
+    border-bottom: 1px solid rgb(97, 0, 97);
     margin-bottom: 10px;
     padding: 10px;
 }
@@ -45,10 +51,11 @@ body{
 #cpf{
     background-color: black;
     border-radius: 3px;
+    color: black;
 }
 
 #cpf:hover{
-    background-color: white;
+    color: #fff;
 }
 
 .titleInfo{
@@ -64,7 +71,7 @@ body{
 }
 
 .new-purshase-div{
-    border-bottom: 1px solid #2c3e50;
+    border-bottom: 1px solid rgb(97, 0, 97);
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
@@ -77,7 +84,7 @@ body{
 #purchase-list{
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid #2c3e50;
+    border-bottom: 1px solid rgb(97, 0, 97);
     margin-left: 20px;
     margin-right: 20px;
     padding: 30px;
@@ -88,7 +95,7 @@ body{
 #purchase-list li{
     display: flex;
     justify-content:space-between;
-    background-color: #acacac;
+    background-color: #1b1b1b;
     border-radius: 3px;
     padding: 5px;
 }
@@ -114,8 +121,9 @@ body{
     justify-content: center;
     align-items: center;
     margin: 20px;
-    border-bottom: 1px solid #2c3e50;
+    border-bottom: 1px solid rgb(97, 0, 97);
     padding-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 .payment{
@@ -126,8 +134,8 @@ body{
 #payment-list{
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid #2c3e50;
-    border-top: 1px solid #2c3e50;
+    border-bottom: 1px solid rgb(97, 0, 97);
+    border-top: 1px solid rgb(97, 0, 97);
     margin-left: 20px;
     margin-right: 20px;
     padding: 30px;
@@ -138,7 +146,7 @@ body{
 #payment-list li{
     display: flex;
     justify-content:space-around;
-    background-color: #acacac;
+    background-color: #1b1b1b;
     border-radius: 3px;
     padding: 5px;
 }
@@ -147,12 +155,16 @@ body{
     display: flex;
     justify-content: center;
     margin: 10px;
+    font-size: 1.5rem;
+
 }
 
 #remaining-balance{
     display: flex;
     justify-content: center;
     margin: 10px;
+    font-size: 1.5rem;
+
 }
 
 .pay{
@@ -167,7 +179,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(161, 161, 161);
+    background-color: #1b1b1b;
     padding: 100px;
     display: flex;
     align-items: center;
@@ -175,7 +187,7 @@ body{
     justify-content: center;
     text-align: center;
     font-size: 2rem;
-    border-radius: 5px;
+    border-radius: 15px 0px 15px 0px;
     gap: 10px;
 }
 
