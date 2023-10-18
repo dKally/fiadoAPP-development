@@ -676,3 +676,60 @@ body{
     animation: show-1 2s ease-in-out 0s forwards;
 }
 
+/* Animation Hide */
+
+.animation-hide{
+    animation: hide 1s ease-in-out 0s forwards;
+}
+
+.animation-hide-1{
+    animation: hide 0.5s ease-in-out 0s forwards;
+}
+
+@keyframes hide {
+    0%{
+        opacity: 100%;
+    }100%{
+        opacity: 0%;
+    }
+}
+
+.user-created{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    background-color: rgba(97, 0, 97, 0.5);
+    padding: 60px;
+    border-radius: 30px 3px 30px 3px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.user-created p{
+    margin-bottom: 15px;
+}
+
+.btn-registred{
+    padding: 20px 60px 20px 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px 0px 10px 0px;
+    color: rgb(97, 0, 97);
+    transform: translateX(5px) scale(0.8);
+    transform: translateY(5px) scale(0.8);
+    transform: translateZ(5px) scale(0.8);
+    border: 1px solid rgb(97, 0, 97);
+}
+
+.btn-registred:hover{
+    box-shadow: 0 0 10px rgb(97, 0, 97),
+    0 0 22px rgb(97, 0, 97);
+    background-color: gray;
+    color: rgb(131, 0, 131);
+    transform: translateX(5px) scale(1);
+    transform: translateY(5px) scale(1);
+    transform: translateZ(5px) scale(1);
+}
