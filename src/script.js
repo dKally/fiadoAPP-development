@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 function checkCreateClientesFolder() {
-  const clientesFolderPath = path.join(os.homedir(), 'Documentos', 'Clientes FiadoAPP');
+  const clientesFolderPath = path.join(__dirname, 'Clientes FiadoAPP');
 
   if (!fs.existsSync(clientesFolderPath)) {
     fs.mkdirSync(clientesFolderPath);

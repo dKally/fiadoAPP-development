@@ -7,7 +7,7 @@ document.querySelector('.submit-btn').addEventListener('click', () => {
   sendForm();
 })
 
-const clientsPath = path.join(os.homedir(), 'Documentos', 'Clientes FiadoAPP')
+const clientsPath = path.join(__dirname, '..', 'Clientes FiadoAPP')
 
 let name
 let lastName

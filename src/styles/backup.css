@@ -29,11 +29,9 @@ body{
     font-size: 1.5rem;
     border-radius: 5px;
     gap: 10px;
-    color: #fff;
 }
 
 .container-alert-2{
-    color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,6 +46,10 @@ body{
     font-size: 1.5rem;
     border-radius: 5px;
     gap: 10px;
+}
+
+.container-alert-1 button, .container-alert-2 button{
+    color: black;
 }
 
 #btn{

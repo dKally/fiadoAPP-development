@@ -18,12 +18,12 @@ document.querySelector('.backup').addEventListener('click', ()=>{
     openBackup()
 })
 
+const clientsPaste = path.join(__dirname, '..', 'Clientes FiadoAPP')
+
+const clientsZip = path.join(os.homedir(), 'Documentos', 'Clientes FiadoAPP.zip')
+
 
 function saveBackup() {
-
-  const clientsPaste = path.join(os.homedir(), 'Documentos', 'Clientes FiadoAPP')
-
-  const clientsZip = path.join(os.homedir(), 'Documentos', 'Clientes FiadoAPP.zip')
 
   document.querySelector('.container-alert-2').classList.remove('hide')
 
@@ -33,11 +33,6 @@ function saveBackup() {
 
   )
 
-  document.querySelector('.paste').addEventListener('click', ()=>{
-    document.querySelector('.container-alert-2').classList.add('hide')
-    console.log(`Backup da pasta "${clientsPaste}" criado com sucesso em "${clientsPaste}".`)
-    shell.openPath(path.join(os.homedir(), 'Documentos'))
-  })
 
   document.querySelector('.zip').addEventListener('click', ()=>{
     document.querySelector('.container-alert-2').classList.add('hide')
@@ -66,7 +61,7 @@ ipcRenderer.on('selected-folder', (event, paths) => {
       console.log('Seleção de pasta cancelada.')
     } else {
       const folderPath = paths[0]
-      const pathDestiny = path.join(os.homedir(), 'Documentos', 'Clientes FiadoAPP')
+      // const pathDestiny = path.join(os.homedir(), 'Documentos', 'Clientes FiadoAPP')
       console.log(path.basename)
       console.log(path)
       if (path.basename(folderPath) !== 'Clientes FiadoAPP'){
@@ -74,9 +69,9 @@ ipcRenderer.on('selected-folder', (event, paths) => {
         return
       }
 
-      if(folderPath === pathDestiny){
-        return alert('A pasta selecionada é sua pasta "Clientes FiadoAPP" atual!')
-      }
+      // if(folderPath === pathDestiny){
+      //   return alert('A pasta selecionada é sua pasta "Clientes FiadoAPP" atual!')
+      // }
 
       document.querySelector('.container-alert-1').classList.remove('hide')
 
@@ -89,10 +84,10 @@ ipcRenderer.on('selected-folder', (event, paths) => {
   
         if (path.basename(folderPath) === 'Clientes FiadoAPP') {
           try {
-            fs.removeSync(pathDestiny) 
-            fs.moveSync(folderPath, pathDestiny) 
+            fs.removeSync(clientsPaste) 
+            fs.moveSync(folderPath, clientsPaste) 
     
-            console.log(`A pasta "Clientes FiadoAPP" foi movida e substituiu ${pathDestiny}`)
+            console.log(`A pasta "Clientes FiadoAPP" foi movida e substituiu ${clientsPaste}`)
             document.querySelector('.container-alert-1').classList.add('hide')
             console.log('Backup feito com sucesso!')
           } catch (error) {

@@ -8,7 +8,7 @@ console.log(currentClient)
 
 let currentClientPath
 
-const clientsPath = path.join(os.homedir(), 'Documentos', 'Clientes FiadoAPP')
+const clientsPath = path.join(__dirname, '..', 'Clientes FiadoAPP')
 
 
 document.addEventListener('DOMContentLoaded', function() {
