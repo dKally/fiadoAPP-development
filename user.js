@@ -22,7 +22,7 @@ setInterval(() => {
     if(homeScreen === true){
         document.addEventListener('keydown', (event)=>{
             if(event.key){
-                document.querySelector('.welcome').classList.add('animation-hide')
+                document.querySelector('.welcome').classList.add('animation-hide-welcome')
                 startLogin()
 
                 homeScreen = false
@@ -150,8 +150,11 @@ function startLogin(){
                     console.log(answerUserName, answerPassword)
     
                     if(answerUserName === userName && answerPassword === password){
-                        
-                        window.location.href = appHtml
+                        document.querySelector('.sign-in').classList.add('animation-hide-1')
+                        setTimeout(() => {
+                            window.location.href = appHtml
+
+                        }, 500);
                     }
                     else{
                         console.log('Senha errada!')
