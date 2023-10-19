@@ -648,9 +648,9 @@ body{
     }
 }
 
-/* Animation Hide */
+/* Animation Hide Welcome */
 
-.animation-hide{
+.animation-hide-welcome{
     animation: animation-hide 2s ease-in-out 0s forwards;
 }
 
